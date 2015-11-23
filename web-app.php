@@ -10,7 +10,7 @@ $config = array(
   'iotf_api_key' => 'IOTF-API-KEY',
   'iotf_api_secret' => 'IOTF-API-TOKEN',
   'maps_api_key' => 'GOOGLE-API-KEY',
-  'device_id' => 'DEVICE-_ID'
+  'device_id' => 'DEVICE-ID'
 );
 
 $config['server'] = $config['org_id'] . '.messaging.internetofthings.ibmcloud.com';

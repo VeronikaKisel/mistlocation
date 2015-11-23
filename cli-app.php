@@ -10,7 +10,7 @@ $config = array(
   'app_id' => 'phpmqtt',
   'iotf_api_key' => 'IOTF-API-KEY',
   'iotf_api_secret' => 'IOTF-API-TOKEN',
-  'device_id' => 'DEVICE-_ID'
+  'device_id' => 'DEVICE-ID'
 );
 
 

@@ -10,7 +10,8 @@ $config = array(
   'iotf_api_key' => 'IOTF-API-KEY',
   'iotf_api_secret' => 'IOTF-API-TOKEN',
   'maps_api_key' => 'GOOGLE-API-KEY',
-  'device_id' => 'DEVICE-ID'
+  'device_id' => 'DEVICE-ID',
+  'qos' => 1  
 );
 
 $config['server'] = $config['org_id'] . '.messaging.internetofthings.ibmcloud.com';
@@ -29,8 +30,8 @@ if(!$mqtt->connect(true, null, $config['iotf_api_key'], $config['iotf_api_secret
 
 // subscribe to topics
 $topics['iot-2/type/+/id/' . $config['device_id'] . '/evt/accel/fmt/json'] = 
-  array('qos' => 0, 'function' => 'getLocation');
-$mqtt->subscribe($topics, 0);
+  array('qos' => $config['qos'], 'function' => 'getLocation');
+$mqtt->subscribe($topics, $config['qos']);
 
 // process messages
 $elapsedSeconds = 0;

@@ -39,7 +39,7 @@ while ($mqtt->proc(true)) {
   if (count($location) == 2) {
     $latitude = $location[0];
     $longitude = $location[1];
-    $mapsApiUrl = 'https://maps.googleapis.com/maps/api/staticmap?key=' . $config['maps_api_key'] . '&size=640x480&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0xf5f5f5&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x616161&style=element:labels.text.stroke%7Ccolor:0xf5f5f5&style=feature:administrative.land_parcel%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:road%7Celement:geometry%7Ccolor:0xffffff&style=feature:road.arterial%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:road.highway%7Celement:geometry%7Ccolor:0xdadada&style=feature:road.highway%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:transit.line%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:transit.station%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:water%7Celement:geometry%7Ccolor:0xc9c9c9&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&scale=2&markers=color:green|' . sprintf('%f,%f', $latitude, $longitude);
+    $mapsApiUrl = 'https://maps.googleapis.com/maps/api/staticmap?key=' . $config['maps_api_key'] . '&size=640x480&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0xf5f5f5&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x616161&style=element:labels.text.stroke%7Ccolor:0xf5f5f5&style=feature:administrative.land_parcel%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:road%7Celement:geometry%7Ccolor:0xffffff&style=feature:road.arterial%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:road.highway%7Celement:geometry%7Ccolor:0xdadada&style=feature:road.highway%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:transit.line%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:transit.station%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:water%7Celement:geometry%7Ccolor:0xc9c9c9&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&scale=2&markers=color:black|' . sprintf('%f,%f', $latitude, $longitude);
 
 
     break;
@@ -150,6 +150,7 @@ function getLocation($topic, $msg) {
                                     Total <strong>5 deliveries.</strong>
                                     <br />
                                     <strong>100 %</strong> of deliveries on time.
+                                    test
                                 </div>
                             </div>
                         </div>
@@ -161,16 +162,16 @@ function getLocation($topic, $msg) {
 
     </section>
     <section id="contact" class="contact bg-primary">
-        <div class="container">
-            <h2>Follow UPM on social media!</h2>
-            <ul class="list-inline list-social">
-                <li class="col-sm-4 social-twitter">
+        <div class="container" style="padding-bottom: 20px;">
+            <h2 style="text-align: center;">Follow UPM on social media!</h2>
+            <ul class="list-inline list-social" ">
+                <li style="text-align: center;" class="col-sm-4 social-twitter">
                     <a href="#"><i class="fa fa-3x fa-twitter"></i></a>
                 </li>
-                <li class="col-sm-4 social-facebook">
+                <li style="text-align: center;" class="col-sm-4 social-facebook">
                     <a href="#"><i class="fa fa-3x fa-facebook"></i></a>
                 </li>
-                <li class="col-sm-4 social-google-plus">
+                <li style="text-align: center;" class="col-sm-4 social-google-plus">
                     <a href="#"><i class="fa fa-3x fa-google-plus"></i></a>
                 </li>
             </ul>

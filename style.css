@@ -8,6 +8,16 @@
     background: #333;
 }
 
+.navbar-default {
+    color: #fff;
+    background: #333;
+}
+
+.bg-primary {
+    color: #fff;
+    background: #333;
+}
+
 body {
 	font-family: 'futura-pt', Helvetica, Arial, sans-serif;
 }

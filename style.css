@@ -1,0 +1,13 @@
+.navbar-header {
+	color: #fff;
+	background: #333
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+    background: #333;
+}
+
+body {
+	font-family: 'futura-pt', Helvetica, Arial, sans-serif;
+}
